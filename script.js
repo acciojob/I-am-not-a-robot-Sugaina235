@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
    function resetState() {
 	   clickedImages=[];
 	   const allimgs=imageContainer.querySelectorAll("img");
-	   allimgs.forEach(img=>img.classList.remove("selected"));
+	   for (let i = 0; i < allimgs.length; i++) {
+       allimgs[i].classList.remove("selected");
+     }
 	   const resetBtn=document.getElementById("reset");
 	   const verifyBtn=document.getElementById("verify");
 	   if(resetBtn) resetBtn.remove();
